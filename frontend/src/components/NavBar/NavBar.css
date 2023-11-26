@@ -1,0 +1,30 @@
+
+.navigation {
+    background-color: rgb(245, 245, 223);
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 25px;
+    display: flex;
+    padding: 15px 25px;
+    align-items: center;
+    justify-content:space-between;
+  
+  
+    & > ul {
+      display: flex;
+  
+      & > li {
+        padding: 8px 15px;
+        transition: all 0.2s ease;
+        list-style: none;
+  
+        &:hover {
+          border-bottom: 2px solid rgb(165, 13, 13);
+        }
+      }
+    }
+  
+    .active-link {
+      border-bottom: 2px solid rgb(165, 13, 13);
+    }
+  }
+  
