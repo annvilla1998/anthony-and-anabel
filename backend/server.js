@@ -12,10 +12,13 @@ const router = require("./routes/index");
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '../frontend/')));
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 app.use('/api', router);
 app.use(cors());
 
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, './frontend/build', 'index.html'));
+});
 
 db.mongoose
   .connect(db.url)

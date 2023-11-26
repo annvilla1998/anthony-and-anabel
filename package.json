@@ -1,0 +1,17 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd frontend && npm start",
+    "server": "cd backend && node server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "dev:server": "cd frontend && npm run build && cd .. && npm run start",
+    "start": "cd backend && node server.js",
+    "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "proxy": "http://www.anthony-and-anabel.com",
+  "author": "",
+  "license": "ISC"
+}
