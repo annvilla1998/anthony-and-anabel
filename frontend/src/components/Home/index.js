@@ -1,20 +1,20 @@
-import React from 'react'
+import React from 'react';
+import "./home.css";
 
 
 export default function Home() {
 
   return (
-    <div className="home">
-      <div className="cover-image">
+    <div className="home card">
+      <figure>
         <img
           src="/images/cover.jpg"
-          style={{objectFit: "scale-down", fill: "true"}}
           alt="Engagement day"
         />
-      </div>
-      <div className="about-section">
-        <h1 className="text-4xl">About Us</h1>
-        <p className="text-lg">All about us</p>
+      </figure>
+      <div className="card-body items-center text-center about-section">
+        <h1 className="text-2xl card-title">About Us</h1>
+        <p>All about us</p>
       </div>
     </div>
   )

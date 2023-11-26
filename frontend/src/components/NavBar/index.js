@@ -13,18 +13,22 @@ const NavBar = () => {
 
   return (
     <div>
-        <nav className="navigation">
-        <Link className={`${"/" === location.pathname ?  "active-link" : ""}`} to="/">Home</Link>
-        <ul>
-            <li>
-            <Link passHref={true} to="https://www.honeyfund.com/site/sieber-villalobos-05-26-2024">Honeyfund</Link>
-            </li>
-            {links.map(({ label, href }) => (
-            <li key={href} className={`${href === location.pathname ?  "active-link" : ""}`}>
-                <Link to={href}>{label}</Link>
-            </li>
-            ))}
-        </ul>
+        <nav className="navbar navigation">
+          <div className="flex-1">
+            <Link className={`${"/" === location.pathname ?  "active-link" : ""}`} to="/">Home</Link>
+          </div>
+          <div className="flex-none">
+            <ul className="menu menu-horizontal px-1">
+                <li>
+                <Link passHref={true} to="https://www.honeyfund.com/site/sieber-villalobos-05-26-2024">Honeyfund</Link>
+                </li>
+                {links.map(({ label, href }) => (
+                <li key={href} className={`${href === location.pathname ?  "active-link" : ""}`}>
+                    <Link to={href}>{label}</Link>
+                </li>
+                ))}
+            </ul>
+          </div>
         </nav>
         <Outlet />
     </div>
