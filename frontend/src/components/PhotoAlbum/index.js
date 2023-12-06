@@ -1,9 +1,19 @@
-import React from 'react'
+import React from 'react';
+import "./photo-album.css";
+
+const images = require.context('../../../public/images', true);
+const imageList = images.keys().map(image => images(image));
+
 
 const PhotoAlbum = () => {
+
   return (
-    <div>
-      Photo Album
+    <div className="photo-album">
+      {imageList.map((image, index) => (
+        <figure className="image-container">
+          <img key={index} alt={`image-${index}`} src={image}></img>
+        </figure>
+      ))}
     </div>
   )
 }

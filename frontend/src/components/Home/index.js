@@ -8,7 +8,7 @@ export default function Home() {
     <div className="home card">
       <figure>
         <img
-          src="/images/cover.jpg"
+          src="/coverImage/cover.jpg"
           alt="Engagement day"
         />
       </figure>
