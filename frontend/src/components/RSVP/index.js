@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useSWR from "swr";
+import useSWR, { mutate } from "swr";
 import "./rsvp.css";
 
 
@@ -20,21 +20,37 @@ const RSVP = () => {
     )));
 
 
-    const addGuest = () => {
+    const addGuest = async () => {
         const newGuest = {
             firstName: firstName,
             lastName: lastName
+        };
+    
+        try {
+            // Make the POST request
+            const response = await fetch('/api/guests', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(newGuest),
+            });
+    
+            // Check if the request was successful (status code 2xx)
+            if (response.ok) {
+                // Refetch the data after a successful POST request
+                mutate('/api/guests');
+                // Clear the form fields
+                setFirstName('');
+                setLastName('');
+            } else {
+                // Handle error cases if needed
+                console.error('Failed to add guest:', response.status, response.statusText);
+            }
+        } catch (error) {
+            console.error('Error adding guest:', error);
         }
-
-        fetch('/api/guests', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(newGuest),
-        }).then(function (res) { return res.json(data); })
-            .then(function (data) { console.log(data) })
-    }
+    };
 
 
     return (
