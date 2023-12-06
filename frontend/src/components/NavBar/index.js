@@ -13,7 +13,7 @@ const NavBar = () => {
 
   return (
     <div>
-        <nav className="navbar navigation">
+        <nav className="navbar navigation shadow-lg">
           <div className="flex-1">
             <Link className={`${"/" === location.pathname ?  "active-link" : ""}`} to="/">Home</Link>
           </div>

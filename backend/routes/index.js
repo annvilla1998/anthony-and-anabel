@@ -37,4 +37,21 @@ router.post('/guests', async (req, res) => {
     }
 })
 
+router.delete('/guests/:id', async (req, res) => {
+
+    const { id } = req.params;
+
+    try {
+        const data = await Guest.findByIdAndDelete(id);
+        res.send(data);
+    } catch (err) {
+        res.status(500).send({
+            message:
+                err.message || "Some error occurred while deleting the Guest."
+        });
+    }
+    
+
+})
+
 module.exports = router;

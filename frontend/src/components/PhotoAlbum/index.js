@@ -11,7 +11,7 @@ const PhotoAlbum = () => {
     <div className="photo-album">
       {imageList.map((image, index) => (
         <figure className="image-container">
-          <img key={index} alt={`image-${index}`} src={image}></img>
+          <img key={index} alt={`${index}`} src={image}></img>
         </figure>
       ))}
     </div>

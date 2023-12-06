@@ -32,7 +32,7 @@ const RSVP = () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(newGuest),
-        }).then(function (res) { return res.json(); })
+        }).then(function (res) { return res.json(data); })
             .then(function (data) { console.log(data) })
     }
 
@@ -40,43 +40,46 @@ const RSVP = () => {
     return (
         <div className="rsvp">
             <div className="rsvp-section">
-                <button className="btn-wide btn-md" onClick={() => document.getElementById('guest-form-modal').setAttribute("open", "")}>Need to RSVP?</button>
                 <dialog id="guest-form-modal" className="modal">
-                    <div className="modal-box">
-                        <h3 className="font-bold text-lg">RSVP</h3>
-                        <form method="dialog" onSubmit={addGuest} >
-                            <label>First Name:
-                                <input
-                                    type="text"
-                                    name="firstName"
-                                    value={firstName}
-                                    onChange={(e) => setFirstName(e.target.value)}
-                                    required
-                                />
-                            </label>
-                            <label>Last Name:
-                                <input
-                                    type="text"
-                                    name="lastName"
-                                    value={lastName}
-                                    onChange={(e) => setLastName(e.target.value)}
-                                    required
-                                />
-                            </label>
-                            <button type="submit">Submit</button>
+                    <div className="modal-box flex flex-col h-1/2 justify-center items-center gap-8">
+                        <h3 className="font-bold text-2xl text-center">RSVP</h3>
+                        <form className="flex flex-col gap-4" method="dialog" onSubmit={addGuest} >
+                            <input
+                                className="input input-bordered w-full max-w-xs"
+                                type="text"
+                                name="firstName"
+                                value={firstName}
+                                placeholder="First Name"
+                                onChange={(e) => setFirstName(e.target.value)}
+                                required
+                            />
+                            <input
+                                className="input input-bordered w-full max-w-xs"
+                                type="text"
+                                name="lastName"
+                                value={lastName}
+                                placeholder="Last Name"
+                                onChange={(e) => setLastName(e.target.value)}
+                                required
+                            />
+                            <button className="btn btn-block" type="submit">Submit</button>
                         </form>
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={() => document.getElementById('guest-form-modal').removeAttribute("open")}>✕</button>
                     </div>
                 </dialog>
             </div>
-            <div className="guest-list text-center overflox-x-auto">
-                <h1 className="text-xl font-bold">Guest List</h1>
+            <div className="guest-list mt-6 flex flex-col justify-center items-center w-full overflox-x-auto gap-3">
+                <div className="rsvp flex justify-around items-center flex-wrap gap-6 w-full">
+                    <h1 className="text-2xl font-bold">Guest List</h1>
+                    <button className="btn btn-outline btn-accent" onClick={() => document.getElementById('guest-form-modal').setAttribute("open", "")}>Need to RSVP?</button>
+                </div>
                 {error !== undefined ? (
                     <div>Could not load guests at this moment.</div>
                 ) : (
-                    <table className="table">
+                    <table className="table w-4/5">
                         <thead>
                             <tr>
+                                <th>#</th>
                                 <th>Name</th>
                             </tr>
                         </thead>

@@ -10,6 +10,6 @@ module.exports = {
     require('autoprefixer'),
   ],
   daisyui: {
-    themes: ["winter"]
+    themes: ["retro"]
   }
 }

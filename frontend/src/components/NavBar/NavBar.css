@@ -1,9 +1,5 @@
 
-.navigation {
-    background-color: rgb(245, 245, 223);
-  
-    .active-link {
-      border-bottom: 2px solid rgb(165, 13, 13);
-    }
-  }
+.active-link {
+  border-bottom: 2px solid black;
+}
   

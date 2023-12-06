@@ -4,13 +4,11 @@ import Home from "./components/Home";
 import RSVP from "./components/RSVP";
 import PhotoAlbum from "./components/PhotoAlbum";
 
-import './App.css';
-
 
 
 function App() {
   return (
-    <div className="App">
+    <div data-theme="retro" className="App">
       <Routes>
         <Route path="/" element={<NavBar />}>
           <Route index element={<Home />} />
