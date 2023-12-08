@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cd52b1a2.css",
-    "main.js": "/static/js/main.a31cdea7.js",
+    "main.css": "/static/css/main.28d1f83f.css",
+    "main.js": "/static/js/main.544e96f3.js",
     "static/media/rosesRight.png": "/static/media/rosesRight.d4cac6ea155bf4f734e4.png",
     "static/media/rosesLeft.png": "/static/media/rosesLeft.fa45fbfa0841e59c9ef6.png",
     "static/media/IMG_1076.JPG": "/static/media/IMG_1076.f1e6d8d278a2f4a9a78d.JPG",
@@ -14,6 +14,7 @@
     "static/media/IMG_1814.jpg": "/static/media/IMG_1814.d82bbb1c6270cd8721f3.jpg",
     "static/media/IMG_1804.jpg": "/static/media/IMG_1804.e815da090074848b717b.jpg",
     "static/media/IMG_0482.JPG": "/static/media/IMG_0482.87087205ffd183cab3d3.JPG",
+    "static/media/cover.jpg": "/static/media/cover.5e1e3ce0457baccd5012.jpg",
     "static/media/IMG_0777.jpg": "/static/media/IMG_0777.100013e33e8e87187670.jpg",
     "static/media/IMG_1994.jpg": "/static/media/IMG_1994.2ee0b83e534a5e41ef88.jpg",
     "static/media/466EB43A-8E0D-462D-8955-240EEA2CB1AD.JPG": "/static/media/466EB43A-8E0D-462D-8955-240EEA2CB1AD.3f132ea0e1afb374f7db.JPG",
@@ -43,11 +44,11 @@
     "static/media/IMG_0314.jpg": "/static/media/IMG_0314.539d275a98bf8361e0f9.jpg",
     "static/media/IMG_0304.jpg": "/static/media/IMG_0304.753250def7da49ea3433.jpg",
     "index.html": "/index.html",
-    "main.cd52b1a2.css.map": "/static/css/main.cd52b1a2.css.map",
-    "main.a31cdea7.js.map": "/static/js/main.a31cdea7.js.map"
+    "main.28d1f83f.css.map": "/static/css/main.28d1f83f.css.map",
+    "main.544e96f3.js.map": "/static/js/main.544e96f3.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd52b1a2.css",
-    "static/js/main.a31cdea7.js"
+    "static/css/main.28d1f83f.css",
+    "static/js/main.544e96f3.js"
   ]
 }

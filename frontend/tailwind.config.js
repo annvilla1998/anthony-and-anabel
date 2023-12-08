@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    './src/**/*.{js}',
+    "./src/**/*.{html,js}",
   ],
   plugins: [
     require("daisyui"),
@@ -10,6 +10,6 @@ module.exports = {
     require('autoprefixer'),
   ],
   daisyui: {
-    themes: ["retro"]
+    themes: ["retro", "winter"]
   }
 }

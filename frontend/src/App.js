@@ -3,8 +3,10 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import RSVP from "./components/RSVP";
 import PhotoAlbum from "./components/PhotoAlbum";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
-
+library.add(fas);
 
 function App() {
   return (

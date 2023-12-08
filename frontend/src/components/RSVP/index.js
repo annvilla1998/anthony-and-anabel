@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import useSWR, { mutate } from "swr";
-import "./rsvp.css";
 
 
 const fetcher = (url, options) => {
@@ -87,7 +86,7 @@ const RSVP = () => {
             <div className="guest-list mt-6 flex flex-col justify-center items-center w-full overflox-x-auto gap-3">
                 <div className="rsvp flex justify-around items-center flex-wrap gap-6 w-full">
                     <h1 className="text-2xl font-bold">Guest List</h1>
-                    <button className="btn btn-outline btn-accent" onClick={() => document.getElementById('guest-form-modal').setAttribute("open", "")}>Need to RSVP?</button>
+                    <button className="btn" onClick={() => document.getElementById('guest-form-modal').setAttribute("open", "")}>Need to RSVP?</button>
                 </div>
                 {error !== undefined ? (
                     <div>Could not load guests at this moment.</div>
