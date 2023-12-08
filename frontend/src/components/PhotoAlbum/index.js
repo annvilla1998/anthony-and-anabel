@@ -10,8 +10,8 @@ const PhotoAlbum = () => {
   return (
     <div className="photo-album">
       {imageList.map((image, index) => (
-        <figure className="image-container">
-          <img key={index} alt={`${index}`} src={image}></img>
+        <figure key={index} className="image-container">
+          <img alt={`${index}`} src={image}></img>
         </figure>
       ))}
     </div>
