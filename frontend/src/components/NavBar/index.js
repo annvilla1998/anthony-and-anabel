@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation, Link, Outlet } from "react-router-dom";
+import "./NavBar.css"
 
 
 const NavBar = () => {
@@ -19,7 +20,7 @@ const NavBar = () => {
           <div className="flex-none">
             <ul className="menu menu-horizontal px-1">
                 <li>
-                <Link passhref="true" to="https://www.honeyfund.com/site/sieber-villalobos-05-26-2024">Honeyfund</Link>
+                <Link passHref={true} to="https://www.honeyfund.com/site/sieber-villalobos-05-26-2024">Honeyfund</Link>
                 </li>
                 {links.map(({ label, href }) => (
                 <li key={href} className={`${href === location.pathname ?  "active-link" : ""}`}>
