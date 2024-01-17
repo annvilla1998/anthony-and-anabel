@@ -57,9 +57,10 @@ const RSVP = () => {
         <div className="rsvp">
             <div className="rsvp-section">
                 <dialog id="guest-form-modal" className="modal">
-                    <div className="modal-box flex flex-col h-1/2 justify-center items-center gap-8">
+                    <div className="modal-box flex flex-col h-3/4 justify-center items-center gap-8">
                         <h3 className="font-bold text-2xl text-center">RSVP</h3>
                         <p style={{ color: "red" }}>No kids!</p>
+                        <p style={{ textAlign: "center" }}>**There will be an open bar but please bring cash for the bartender**</p>
                         <form className="flex flex-col gap-4" method="dialog" onSubmit={addGuest} >
                             <input
                                 className="input input-bordered w-full max-w-xs"
