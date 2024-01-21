@@ -57,10 +57,11 @@ const RSVP = () => {
         <div className="rsvp">
             <div className="rsvp-section">
                 <dialog id="guest-form-modal" className="modal">
-                    <div className="modal-box flex flex-col h-3/4 justify-center items-center gap-8">
+                    <div className="modal-box flex flex-col h-6/8 justify-center items-center gap-2">
                         <h3 className="font-bold text-2xl text-center">RSVP</h3>
                         <p style={{ color: "red" }}>No kids!</p>
                         <p style={{ textAlign: "center" }}>**There will be an open bar but please bring cash for the bartender**</p>
+                        <p style={{ textAlign: "center" }}>It's memorial day weekend! We suggest booking a room soon if you plan on staying nearby</p>
                         <form className="flex flex-col gap-4" method="dialog" onSubmit={addGuest} >
                             <input
                                 className="input input-bordered w-full max-w-xs"
@@ -94,7 +95,7 @@ const RSVP = () => {
                 {error !== undefined ? (
                     <div>Could not load guests at this moment.</div>
                 ) : (
-                    <table className="table w-4/5">
+                    <table className="table w-4/5 mb-8">
                         <thead>
                             <tr>
                                 <th>#</th>
